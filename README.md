@@ -1,5 +1,7 @@
 # picture-answers
 
+![The gallery: three kept answers, each a drawing with its question](docs/screenshots/gallery.png)
+
 A Claude Code skill that answers some questions with a drawing first: a metaphor that carries its numbers, with the text under it. Plus a small static gallery for the answers worth keeping.
 
 Two piles instead of two bars. A clinic with two lit rooms instead of a router diagram. A trail with tents behind you instead of a checklist.
@@ -37,6 +39,12 @@ Build the gallery:
 ```bash
 cd gallery && npm run build
 ```
+
+The build writes `gallery/dist/`, a static site with an index and one page per kept answer. Serve it with any static server, for example `cd gallery/dist && python3 -m http.server 5322`.
+
+![One gallery entry: a trail with camps, the pin marking where the project stands](docs/screenshots/entry.png)
+
+Each entry page shows the question as it was typed, the picture, a one-line reason for the metaphor, and the shape, metaphor and date. The three entries in `gallery/entries/` are jars of hour blocks, a trail with camps and a doctor-versus-clinic picture for mixture of experts.
 
 ## Tests
 
